@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>元玺 v1.7.0 更新日志预览</title>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<style>
+  body { margin:0; background:#f5f6fa; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif; color:#2c2c34; }
+  .meta { max-width:860px; margin:32px auto 0; padding:20px 28px; background:linear-gradient(135deg,#3b3bd4,#7b4fe0); border-radius:14px; color:#fff; }
+  .meta h1 { margin:0 0 6px; font-size:22px; }
+  .meta p { margin:4px 0; font-size:14px; opacity:.92; }
+  .meta .tag { display:inline-block; background:rgba(255,255,255,.2); border-radius:6px; padding:2px 10px; font-size:12px; margin-right:8px; }
+  .card { max-width:860px; margin:20px auto 60px; background:#fff; border-radius:14px; padding:36px 44px; box-shadow:0 4px 24px rgba(60,60,120,.08); line-height:1.75; }
+  .card img { max-width:100%; border-radius:10px; display:block; margin:18px auto; box-shadow:0 2px 12px rgba(60,60,120,.12); }
+  .card h2 { border-bottom:1px solid #ececf4; padding-bottom:8px; margin-top:36px; }
+  .card h3 { margin-top:28px; }
+  .card blockquote { margin:14px 0; padding:10px 18px; background:#f4f4fd; border-left:4px solid #7b4fe0; border-radius:6px; color:#555; }
+  .card hr { border:none; border-top:1px solid #ececf4; margin:30px 0; }
+  .card li { margin:6px 0; }
+</style>
+</head>
+<body>
+<div class="meta">
+  <h1>对话体验升级与会话分支</h1>
+  <p>新增对话过程摘要与会话分支；推理强度按模型记忆并自动恢复；引导消息队列支持排队、撤回、重试与草稿恢复，任务执行更连贯可控。</p>
+  <p><span class="tag">v1.7.0</span><span class="tag">更新范围 2026.07.22 - 2026.07.31</span><span class="tag">重大版本</span></p>
+</div>
+<div class="card" id="content"></div>
+<script>
+const md = "## 元玺 v1.7.0 更新日志\n\n![元玺 v1.7.0 封面图](images/1.7.0_cover.png)\n\n本次版本全面升级**对话体验**，新增过程摘要与会话分支，让思考、工具调用与结果一目了然；同时打磨**模型与推理**选择记忆，推理强度按模型能力动态适配并自动恢复；引导消息队列与工作台体验同步优化，任务执行更连贯、更可控。\n\n### 版本核心亮点\n\n1. **对话过程摘要**：统一展示思考、工具调用与处理结果，长对话阅读更清晰；\n2. **会话分支能力**：可从任意 AI 回复创建新会话分支，保留对应上下文继续探索；\n3. **推理偏好记忆**：按模型记忆推理强度与最近选择，新建会话自动恢复，参数全程保持一致。\n\n---\n\n## ✨ 新增与重大升级\n\n### 🧠 对话过程摘要：看清每一步在做什么\n\n![对话过程摘要配图](images/1.7.0_content_1.png)\n\n对话过程中的关键节点现已统一汇总展示，复杂任务执行过程更易理解：\n\n- **过程一目了然**：思考、工具调用与处理结果集中呈现，减少来回翻找；\n- **状态反馈更及时**：优化流式响应首包反馈与思考状态文案，等待不再茫然；\n- **折叠更顺手**：思考内容支持更清晰的折叠与展开，界面更干净。\n\n> 从「只看到最终答案」，到「清楚每一步如何走到结果」。\n\n### 🌿 会话分支：从任意回复开启新探索\n\n![会话分支配图](images/1.7.0_content_2.png)\n\n支持从任意一条 AI 回复创建新会话分支，并保留对应上下文：\n\n- **一键分叉**：在满意节点处开新分支，无需从头重说；\n- **上下文延续**：分支继承原对话相关上下文，继续深入更顺畅；\n- **多方向并行**：同一任务可探索不同方案与表达，互不干扰。\n\n### ⚡ 推理强度记忆：选过一次，下次自动跟上\n\n![推理强度记忆配图](images/1.7.0_content_3.png)\n\n模型与推理参数体验完成一轮打磨，选择更省心、结果更一致：\n\n- **按能力动态显示**：推理强度根据模型能力动态呈现，避免无效选项；\n- **偏好自动恢复**：按模型记忆推理强度与最近选择，新建会话自动带上；\n- **参数全程一致**：新建会话、后续消息与延迟消息中的模型与推理参数保持统一；\n- **滑块更好用**：支持悬停滑动选择，并以「更高效 / 更智能」引导理解档位差异。\n\n### 📬 引导消息队列：任务进行中也能继续补充\n\n![引导消息队列配图](images/1.7.0_content_4.png)\n\n任务运行期间支持追加引导消息，并完善队列管理能力：\n\n- **运行中可补充**：无需等待当前任务结束，即可继续追加指令；\n- **排队、撤回、重试**：队列操作更完整，过程可控可纠错；\n- **草稿可恢复**：刷新后仍可恢复未完成状态与输入草稿，中断不再丢进度。\n\n---\n\n## 🛠️ 体验优化\n\n- 优化长对话滚动跟随、用户消息定位与任务状态展示，阅读与定位更顺畅；\n- 优化队列错误提示、长文本展示及提交后的自动滚动；\n- 优化虚拟电脑全屏、移动端布局及加载状态；\n- 工具执行失败时仍可打开查看详情，排查问题更方便。\n\n---\n\n## 🐛 问题修复\n\n- 修复 AskUser 表单中转义字符丢失问题；\n- 修复上传失败文件仍触发服务端删除请求的问题；\n- 优化输入草稿 HTML 清理与附件恢复，草稿还原更稳定。\n\n---\n\n感谢每一位用户的信任与支持 ❤️\n\n**元玺，让 AI 成为你的超能力。**\n";
+document.getElementById('content').innerHTML = marked.parse(md);
+</script>
+</body>
+</html>
